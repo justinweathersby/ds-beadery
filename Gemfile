@@ -45,4 +45,5 @@ end
 # gem 'debugger', group: [:development, :test]
 gem 'shoppe', :git => "git://github.com/tryshoppe/core"
 
-gem 'rename'
+gem 'bootstrap-sass', '~>3.2.0'
+gem 'autoprefixer-rails'
