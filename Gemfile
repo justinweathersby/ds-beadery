@@ -44,3 +44,5 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'shoppe', :git => "git://github.com/tryshoppe/core"
+
+gem 'rename'

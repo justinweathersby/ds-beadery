@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-WidgetShop::Application.load_tasks
+DsBeadery::Application.load_tasks

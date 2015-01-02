@@ -8,6 +8,8 @@
 </head>
 <body>
 
+<%=render 'partials/home/header' %>
+
 <% if has_order? %>
 <p style="border:1px solid black;padding:10px;">
   You have <%= pluralize current_order.total_items, 'item'%> in your basket which cost
@@ -19,5 +21,6 @@
 
 <%= yield %>
 
+<%=render 'partials/home/footer' %>
 </body>
 </html>
