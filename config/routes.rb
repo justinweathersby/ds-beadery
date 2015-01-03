@@ -1,5 +1,14 @@
-WidgetShop::Application.routes.draw do
+DsBeadery::Application.routes.draw do
 
+  root :to => 'home#index'
+  
+  get "home/index"
+  get "home/about"
+
+  get '/about',             to: 'home#about'
+  get '/products',          to: 'products#index'
+  
+  #Shoppe Orders and Product Routes
   get 'product/:permalink' => 'products#show', :as => 'product'
   post 'product/:permalink' => 'products#buy'
   get 'basket' => 'orders#show'
@@ -9,8 +18,10 @@ WidgetShop::Application.routes.draw do
   match 'checkout/pay' => 'orders#payment', :as => 'checkout_payment', :via => [:get, :post]
   match 'checkout/confirm' => 'orders#confirmation', :as => 'checkout_confirmation', :via => [:get, :post]
   
-  root :to => 'products#index'
+
   
+  
+
   mount Shoppe::Engine => "/shoppe"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
